@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Message List</h1>
+    <table>
+        <tr>
+            <th>Wechat Name</th>
+            <th>Message</th>
+            <th>Send Time</th>
+        </tr>
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.wechat_name }}</td>
+            <td>{{ message.message }}</td>
+            <td>{{ message.send_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
