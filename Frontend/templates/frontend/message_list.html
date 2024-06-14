@@ -22,13 +22,18 @@
         <tr>
             <th>Wechat Name</th>
             <th>Message</th>
-            <th>Send Time</th>
+            <th>Cron Expression</th>
+            <th>Human Readable Format</th>
+            <th>Next Execution Time</th>
+            <th>Action</th>
         </tr>
         {% for message in messages %}
         <tr>
             <td>{{ message.wechat_name }}</td>
             <td>{{ message.message }}</td>
             <td>{{ message.send_time }}</td>
+            <td>{{ message.human_readable }}</td>
+            <td>{{ message.next_execution }}</td>
         </tr>
         {% endfor %}
     </table>
